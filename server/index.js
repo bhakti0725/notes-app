@@ -9,8 +9,12 @@ connectDB();
 
 const  app=express();
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://notes-app.vercel.app'  // your actual vercel URL
+  ]
+}));app.use(express.json());
 
 app.use('/api/v1/auth', require('./routes/auth.routes'));
 app.use('/api/v1/notes', require('./routes/notes.routes'));
