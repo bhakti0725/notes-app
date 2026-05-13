@@ -12,7 +12,7 @@ const  app=express();
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://notes-app.vercel.app'  // your actual vercel URL
+    'https://notes-app-rho-blue.vercel.app'  // your actual vercel URL
   ]
 }));app.use(express.json());
 
